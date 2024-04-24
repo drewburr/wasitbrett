@@ -1,6 +1,3 @@
-</body>
-</html>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,13 +21,36 @@ a:link, a:visited {
   color: white;
   background-color: transparent;
   text-decoration: none;
+  background: rgba(0,0,0,0.5);
+  width: 110%;
+}
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  filter: blur(3px);
 }
 </style>
-
 </head>
+
 <body>
-<div class="center-screen">
-<a href="https://youtu.be/h2kUX_Fmj7k" target="_self">YES</a>
-</div>
+  <div class="center-screen">
+    <a href="https://youtu.be/h2kUX_Fmj7k" target="_self">YES</a>
+  </div>
+  <div class="video-background">
+    <div class="video-foreground">
+      <iframe src="https://www.youtube.com/embed/h2kUX_Fmj7k?controls=0&showinfo=0&autohide=1&modestbranding=1&rel=0&autoplay=1&mute=1&loop=1&playlist=h2kUX_Fmj7k" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
 </body>
 </html>
